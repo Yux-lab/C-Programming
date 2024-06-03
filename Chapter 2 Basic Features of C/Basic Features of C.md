@@ -50,7 +50,7 @@ int height;
 float profit;
 
 #合并声明
-int height, length, wideth, volume;
+int height, length, width, volume;
 ```
 ### 2.4.3 赋值
 ```
@@ -70,3 +70,39 @@ printf("profit: $%.2f\n", profit)
 #如若强制显示小数点后p位，则把'.p'放在%和f中间。
 ```
 
+### 2.4.5 初始化
+```
+# 数值8 是一个初始化式
+int height = 8
+```
+
+## 2.5　读入输入
+scanf函数
+f:格式化
+```
+#读入一个int型的值
+scanf("%d", &i);
+//%d:说明scanf读入的是一个整数；&:运算符
+&是取地址运算符，用于获取变量的内存地址
+
+#读入一个float型的值
+scanf("%f", &x);
+```
+
+## 2.6　定义常量的名字
+```
+#宏定义（macro definition）；大写字母:约定俗成
+#define:预处理指令
+#define INCHES_PER_POUND 166
+
+#当对程序进行编译时，预处理器会把每一个宏替换为其表示的值。例如，语句
+weight = (volume + INCHES_PER_POUND - 1) / INCHES_PER_POUND; 
+
+#将变为:
+weight = (volume + 166 - 1) / 166; 
+```
+
+## 2.7　标识符
+命名区分大小写
+不以数字开头
+不以关键字命名
